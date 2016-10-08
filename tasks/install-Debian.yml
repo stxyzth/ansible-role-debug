@@ -1,6 +1,6 @@
 ---
 
 - name: Install pip
-  pkgng:
+  apt:
     name: "{{ debug_pip_package }}"
     state: present

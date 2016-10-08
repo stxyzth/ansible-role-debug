@@ -1,2 +1,2 @@
-__debug_db_dir: /var/db/debug
-__debug_conf_dir: /usr/local/etc/debug
+__debug_pip_package: "py{{ __debug_python_version }}-pip"
+__debug_python_version: 27

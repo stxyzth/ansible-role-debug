@@ -1,0 +1,14 @@
+---
+
+- name: Install pip
+  openbsd_pkg:
+    name: "{{ debug_pip_package }}"
+    state: present
+
+
+# ln -sf /usr/local/bin/pip2.7 /usr/local/bin/pip
+- name: Create a symlink
+  file:
+    dest: /usr/local/bin/pip
+    src: "/usr/local/bin/pip{{ debug_python_version }}"
+    state: link

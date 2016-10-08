@@ -5,32 +5,4 @@
 
 - include: "install-{{ ansible_os_family }}.yml"
 
-- name: Create log directory
-  file:
-    path: "{{ debug_log_dir }}"
-    mode: 0755
-    owner: "{{ debug_user }}"
-    group: "{{ debug_group }}"
-    state: directory
-  notify: Restart debug
-
-- name: Create db directory
-  file:
-    path: "{{ debug_db_dir }}"
-    mode: 0755
-    owner: "{{ debug_user }}"
-    group: "{{ debug_group }}"
-    state: directory
-  notify: Restart debug
-
-- name: Create debug.conf
-  template:
-    src: debug.conf.j2
-    dest: "{{ debug_conf_file }}"
-  notify: Restart debug
-
-- name: Start debug
-  service:
-    name: "{{ debug_service }}"
-    enabled: true
-    state: started
+- command: pip install epdb

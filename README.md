@@ -1,6 +1,10 @@
 # ansible-role-debug
 
-A brief description of the role goes here.
+Installs epdb. A simple and handy role when debugging on remote
+machines. Include the role, set a brake point, and debug it on remote.
+
+See [Tips on Using Debuggers With
+Ansible](http://michaeldehaan.net/post/35403909347/tips-on-using-debuggers-with-ansible).
 
 # Requirements
 
@@ -8,9 +12,38 @@ None
 
 # Role Variables
 
-| variable | description | default |
+| Variable | Description | Default |
 |----------|-------------|---------|
+| debug\_pip\_package | | {{ \_\_debug\_pip\_package }} |
+| debug\_python\_version | | {{ \_\_debug\_python\_version }} |
 
+## Debian
+
+| Variable | Default |
+|----------|---------|
+| \_\_debug\_pip\_package | python-pip |
+
+## FreeBSD
+
+| Variable | Default |
+|----------|---------|
+| \_\_debug\_pip\_package | py{{ \_\_debug\_python\_version }}-pip |
+| \_\_debug\_python\_version | 27 |
+
+## OpenBSD
+
+| Variable | Default |
+|----------|---------|
+| \_\_debug\_pip\_package | py-pip |
+| \_\_debug\_python\_version | 2.7 |
+
+[//]: # ( comment out when RedHat is supported )
+[//]: # (## RedHat)
+[//]: # ()
+[//]: # (| Variable | Default |)
+[//]: # (|----------|---------|)
+[//]: # (| \_\_debug\_pip\_package | python-pip |)
+[//]: # (| \_\_debug\_python\_version | "" |)
 
 # Dependencies
 
