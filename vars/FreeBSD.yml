@@ -1,0 +1,2 @@
+__debug_db_dir: /var/db/debug
+__debug_conf_dir: /usr/local/etc/debug

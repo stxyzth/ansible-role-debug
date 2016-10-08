@@ -1,0 +1,6 @@
+---
+
+- name: Restart debug
+  service:
+    name: debug
+    state: restarted

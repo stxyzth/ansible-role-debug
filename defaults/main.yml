@@ -1,0 +1,8 @@
+debug_user: debug
+debug_group: debug
+debug_log_dir: /var/log/debug
+debug_db_dir: "{{ __debug_db_dir }}"
+debug_service: debug
+debug_conf_dir: "{{ __debug_conf_dir }}"
+debug_conf_file: "{{ __debug_conf_dir }}/debug.conf"
+debug_flags: ""

@@ -1,0 +1,5 @@
+- hosts: localhost
+  roles:
+    - ansible-role-debug
+  vars:
+    debug_config: ""

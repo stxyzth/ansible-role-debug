@@ -1,0 +1,6 @@
+---
+
+- name: Install debug
+  pkgng:
+    name: debug
+    state: present
