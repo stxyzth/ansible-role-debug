@@ -52,7 +52,6 @@ None
 
 [//]: # ( comment out when RedHat is supported )
 [//]: # (## RedHat)
-[//]: # ()
 [//]: # (| Variable | Default |)
 [//]: # (|----------|---------|)
 [//]: # (| \_\_debug\_pip\_package | python-pip |)
