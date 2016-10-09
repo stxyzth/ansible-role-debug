@@ -6,6 +6,19 @@ machines. Include the role, set a brake point, and debug it on remote.
 See [Tips on Using Debuggers With
 Ansible](http://michaeldehaan.net/post/35403909347/tips-on-using-debuggers-with-ansible).
 
+In short:
+
+* Add the role
+* Create a break point in where you want to debug (`epdb.serve()`)
+* Run `ansible-play` with `--forks 1`
+* When the play stop, `ssh(1)` to the host
+* Run `python -c "import epdb; epdb.connect()"`
+
+To inspect generated python script, run `ansible-play` with
+`ANSIBLE_KEEP_REMOTE_FILES` environment variable set. See [Debugging
+AnsibleModule-based
+modules](http://docs.ansible.com/ansible/developing_modules.html#debugging-ansiblemodule-based-modules).
+
 # Requirements
 
 None
@@ -39,7 +52,6 @@ None
 
 [//]: # ( comment out when RedHat is supported )
 [//]: # (## RedHat)
-[//]: # ()
 [//]: # (| Variable | Default |)
 [//]: # (|----------|---------|)
 [//]: # (| \_\_debug\_pip\_package | python-pip |)
