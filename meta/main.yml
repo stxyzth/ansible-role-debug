@@ -14,7 +14,7 @@ galaxy_info:
     - 6.0
   - name: Ubuntu
     versions:
-    - 14.04
+    - trusty
   galaxy_tags:
     - debug
 dependencies:
