@@ -1,5 +1,10 @@
 ---
 
+- name: Install epel for pip package
+  yum:
+    name: epel-release
+    state: latest
+
 - name: Install pip
   yum:
     name: "{{ debug_pip_package }}"
