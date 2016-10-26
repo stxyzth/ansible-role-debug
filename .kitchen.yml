@@ -45,6 +45,7 @@ platforms:
   - name: ubuntu-14.04-amd64
     driver:
       box: trombik/ansible-ubuntu-14.04-amd64
+      box_check_update: false
 
 # the default package repo does not have pip, but in epel.
 # TODO: create ansible-role-epel
