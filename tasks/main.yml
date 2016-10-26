@@ -5,4 +5,6 @@
 
 - include: "install-{{ ansible_os_family }}.yml"
 
-- command: pip install epdb
+- name: Install epdb
+  pip:
+    name: epdb
