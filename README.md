@@ -21,7 +21,7 @@ modules](http://docs.ansible.com/ansible/developing_modules.html#debugging-ansib
 
 # Requirements
 
-None
+`ansible` must be installed on the target when `debug_dump` is `true`
 
 # Role Variables
 
@@ -29,6 +29,9 @@ None
 |----------|-------------|---------|
 | debug\_pip\_package | | {{ \_\_debug\_pip\_package }} |
 | debug\_python\_version | | {{ \_\_debug\_python\_version }} |
+| debug\_dump | set true to dump `ansible` variables to file | false |
+| debug\_dump\_dir | path to directory to dump variables | /var/log |
+| debug\_dump\_file | path to the dumped file | {{ debug\_dump\_dir }}/ansible\_variables |
 
 ## Debian
 

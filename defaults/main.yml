@@ -1,2 +1,5 @@
 debug_pip_package: "{{ __debug_pip_package }}"
 debug_python_version: "{{ __debug_python_version }}"
+debug_dump: false
+debug_dump_dir: /var/log
+debug_dump_file: "{{ debug_dump_dir }}/ansible_variables"
