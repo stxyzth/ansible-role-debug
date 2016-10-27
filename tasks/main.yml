@@ -5,4 +5,10 @@
 
 - include: "install-{{ ansible_os_family }}.yml"
 
-- command: pip install epdb
+- name: Install epdb
+  pip:
+    name: epdb
+
+- shell: "ansible -m setup localhost > {{ debug_dump_file }}"
+  changed_when: false
+  when: "{{ debug_dump }}"
